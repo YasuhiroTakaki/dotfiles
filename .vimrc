@@ -80,34 +80,3 @@ colorscheme desert
 "colorscheme zenburn
 "colorscheme Default
 
-""" Status line
-if has('iconv')
-"  set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).(&bomb?':BOM':'').']['.&ff.']'}%=[0x%{FencB()}]\ (%v,%l)/%L%8P\ 
-else
-"  set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).(&bomb?':BOM':'').']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
-endif
-
-if has('syntax')
-  augroup InsertHook
-  autocmd!
-"  autocmd InsertEnter * call SetStatusLine('Enter')
-"  autocmd InsertLeave * call SetStatusLine('Leave')
-  augroup END
-endif
-
-"-------------------------------------------
-" Pulgin setting
-"
-"source ~/.vim/.vim.plugin
-
-"-------------------------------------------
-" Key Mapping
-"
-"source ~/.vim/.vim.keymap
-
-"-------------------------------------------
-" Function include
-"
-"source ~/.vim/.vim.func
-
-
