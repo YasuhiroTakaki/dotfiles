@@ -4,6 +4,8 @@ alias his='history'
 alias hisg='history | grep'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias rmd='rm -Rf'
+alias gvim='gvim -f'
 
 # function
 function ext() {

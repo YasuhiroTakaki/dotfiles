@@ -1,5 +1,20 @@
 set nocompatible
 
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+ 
+" for git
+Bundle "tpope/vim-fugitive"
+Bundle "thinca/vim-tabrecent"
+
+" Utility
+Bundle "glidenote/memolist.vim"
+Bundle "git://git.wincent.com/command-t.git"
+ 
+filetype plugin indent on
+
 "-------------------------------------------
 " Compatible runtime path setting
 "
@@ -32,51 +47,7 @@ set hidden
 set history=50
 set autoread
 
-"-------------------------------------------
-" Search setting
-"
-set ignorecase
-set smartcase
-set wrapscan
-set incsearch
-set hlsearch
-set grepprg=grep\ -nH
-autocmd QuickfixCmdPost grep,make copen
-
-""" Tags file
-set tags+=~/.tags/android_sdk
-set tags+=~/.tags/java
-set tags+=${TOP}/tags
-
-"-------------------------------------------
-" View setting
-"
-""" Editor
-set number
-set showmatch matchtime=1
-set cindent
-set title
-set display=lastline
-set list
-set lines=50
-set columns=140
-
-""" Hilight
-set listchars=tab:^\ ,trail:~
-if &t_Co > 2 || has('gui_running')
-   syntax on
-endif
-
-""" Vim script
-au BufNewFile,BufRead *.vim*	setf vim
-
-""" Command line
-set cmdheight=1
-set laststatus=2
-set showcmd
-
-""" Color scheme
-colorscheme desert
-"colorscheme zenburn
-"colorscheme Default
-
+"" Read plugin files
+for pluginfile in split(glob($VIM.'/plugin/*'), '\n')
+   source pluginfile
+endfor
