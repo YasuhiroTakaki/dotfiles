@@ -23,6 +23,7 @@ Bundle "Shougo/neocomplcache"
 Bundle "tpope/vim-fugitive"
 Bundle "thinca/vim-tabrecent"
 Bundle "glidenote/memolist.vim"
+Bundle "vim-scripts/taglist.vim"
 Bundle "git://git.wincent.com/command-t.git"
  
 filetype plugin indent on

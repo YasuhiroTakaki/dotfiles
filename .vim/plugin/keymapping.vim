@@ -11,6 +11,16 @@ noremap [MEMOCMD]  <nop>
 nmap     <leader>m [MEMOCMD]
 
 """ MAP
+" Bracket {
+    inoremap { {}<LEFT>
+    inoremap [ []<LEFT>
+    inoremap ( ()<LEFT>
+" }
+
+" Function list {
+    nnoremap <silent> <F11> :<c-u>Tlist<cr>
+" }
+
 " TAB Command {
     nnoremap <silent> [TABCMD]f :<c-u>tabfirst<cr>
     nnoremap <silent> [TABCMD]l :<c-u>tablast<cr>
