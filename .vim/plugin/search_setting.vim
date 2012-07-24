@@ -6,7 +6,7 @@ set smartcase
 set wrapscan
 set incsearch
 set hlsearch
-set grepprg=grep\ -nH
+set grepprg=grep\ -nHr
 autocmd QuickfixCmdPost grep,make copen
 
 """ Tags file
