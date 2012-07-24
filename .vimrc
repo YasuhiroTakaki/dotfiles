@@ -24,8 +24,8 @@ Bundle "tpope/vim-fugitive"
 Bundle "thinca/vim-tabrecent"
 Bundle "glidenote/memolist.vim"
 Bundle "vim-scripts/taglist.vim"
-Bundle "git://git.wincent.com/command-t.git"
- 
+Bundle "wincent/Command-T"
+
 filetype plugin indent on
 
 "-------------------------------------------
