@@ -15,6 +15,6 @@ let g:neocomplcache_enable_underbar_completion = 0
 if has('win32') + has('win64')
   let g:neocomplcache_temporary_dir = 'D:/.neoconcache'
 elseif has('unix')
-  let g:neocomplcache_temporary_dir = '${HOME}/.neoconcache'
+  let g:neocomplcache_temporary_dir = '~/.neoconcache'
 endif
 
