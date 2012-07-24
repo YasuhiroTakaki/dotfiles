@@ -34,3 +34,4 @@ filetype plugin indent on
 for pluginfile in split(glob($VIM.'/plugin/*'), '\n')
    source pluginfile
 endfor
+
