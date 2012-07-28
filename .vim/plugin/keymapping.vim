@@ -15,8 +15,8 @@ nmap     <leader>w [WINCMD]
 
 """ MAP
 " Page {
-    noremap <c-j> <c-u>
-    noremap <c-k> <c-d>
+    noremap <c-j> <c-d>
+    noremap <c-k> <c-u>
 " }
 
 " End hilight {
