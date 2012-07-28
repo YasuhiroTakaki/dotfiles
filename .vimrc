@@ -5,7 +5,7 @@ set nocompatible
 "
 if isdirectory($HOME . '/.vim')
    let $MY_VIMRUNTIME = $HOME.'/.vim'
-elseif isdirectory($HOME . '\vimfiles')
+elseif directory($HOME . '\vimfiles')
    let $MT_VIMRUNTIME = $HOME.'\vimfiles'
 elseif isdirectory($VIM . '\vimfiles')
    let $MY_VIMRUNTIME = $VIM.'\vimfiles'

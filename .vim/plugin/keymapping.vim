@@ -10,7 +10,18 @@ nmap     <leader>g [GITCMD]
 noremap [MEMOCMD]  <nop>
 nmap     <leader>m [MEMOCMD]
 
+noremap [WINCMD]  <nop>
+nmap     <leader>w [WINCMD]
+
 """ MAP
+" Window control {
+    nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
+" }
+" Window control {
+    nnoremap <silent> [WINCMD]v :<c-u>vs<cr>
+    nnoremap <silent> [WINCMD]h :<c-u>sp<cr>
+" }
+
 " Explorer(Opsplorer) {
     nnoremap <silent> <leader>e :<c-u>Opsplore<cr>
 " }
