@@ -33,7 +33,7 @@ nmap     <leader>w [WINCMD]
 " }
 
 " Function list {
-    nnoremap <silent> <F11> :<c-u>Tlist<cr>
+    nnoremap <silent> <c-f> :<c-u>Tlist<cr>
 " }
 
 " TAB Command {
