@@ -11,6 +11,10 @@ noremap [MEMOCMD]  <nop>
 nmap     <leader>m [MEMOCMD]
 
 """ MAP
+" Explorer(Opsplorer) {
+    nnoremap <silent> <leader>e :<c-u>Opsplore<cr>
+" }
+
 " Bracket {
     inoremap { {}<LEFT>
     inoremap [ []<LEFT>

@@ -25,6 +25,7 @@ Bundle "thinca/vim-tabrecent"
 Bundle "glidenote/memolist.vim"
 Bundle "vim-scripts/taglist.vim"
 Bundle "wincent/Command-T"
+Bundle "vim-scripts/opsplorer"
 
 filetype plugin indent on
 
