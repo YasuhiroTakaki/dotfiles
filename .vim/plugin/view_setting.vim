@@ -10,6 +10,8 @@ set display=lastline
 set list
 set lines=50
 set columns=140
+set tabstop=4
+set shiftwidth=4
 
 """ Hilight
 set listchars=tab:^\ ,trail:~
