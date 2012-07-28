@@ -14,12 +14,8 @@ noremap [WINCMD]  <nop>
 nmap     <leader>w [WINCMD]
 
 """ MAP
-" Window control {
+" End hilight {
     nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
-" }
-" Window control {
-    nnoremap <silent> [WINCMD]v :<c-u>vs<cr>
-    nnoremap <silent> [WINCMD]h :<c-u>sp<cr>
 " }
 
 " Explorer(Opsplorer) {
@@ -34,6 +30,11 @@ nmap     <leader>w [WINCMD]
 
 " Function list {
     nnoremap <silent> <c-f> :<c-u>Tlist<cr>
+" }
+
+" Window control {
+    nnoremap <silent> [WINCMD]v :<c-u>vs<cr>
+    nnoremap <silent> [WINCMD]h :<c-u>sp<cr>
 " }
 
 " TAB Command {
