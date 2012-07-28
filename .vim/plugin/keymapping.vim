@@ -14,6 +14,11 @@ noremap [WINCMD]  <nop>
 nmap     <leader>w [WINCMD]
 
 """ MAP
+" Page {
+    noremap <c-j> <c-u>
+    noremap <c-k> <c-d>
+" }
+
 " End hilight {
     nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
 " }
@@ -46,8 +51,7 @@ nmap     <leader>w [WINCMD]
     nnoremap <silent> [TABCMD]e :<c-u>tabedit<cr>
     nnoremap <silent> [TABCMD]c :<c-u>tabclose<cr>
     nnoremap <silent> [TABCMD]o :<c-u>tabonly<cr>
-    nnoremap <silent> [TABCMD]s :<c-u>tabs<cr>
-    nnoremap <silent> [TABCMD]r :<c-u>TabRecent<cr>
+    nnoremap <silent> [TABCMD]s :<c-u>tabs<cr> nnoremap <silent> [TABCMD]r :<c-u>TabRecent<cr>
 " }
 
 " GIT Command {
