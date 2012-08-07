@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	ci = commit
+	branches = branch -a
+	tags = tag -l
+	st = status
+[core]
+	editor = vim
+[color]
+	ui = auto
