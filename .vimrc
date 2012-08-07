@@ -39,3 +39,10 @@ for pluginfile in split(glob($VIM.'/plugin/*'), '\n')
    source pluginfile
 endfor
 
+"-------------------------------------------
+" Read local setting files
+"
+if filereadable(expand('$TOP/.vimrc.local'))
+    source $TOP/.vimrc.local
+endif
+
