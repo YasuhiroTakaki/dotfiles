@@ -1,4 +1,4 @@
-"" Keymapping
+" Keymapping
 
 """ Prefix
 noremap [TABCMD]  <nop>
@@ -23,8 +23,8 @@ nmap     <leader>w [WINCMD]
     nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
 " }
 
-" Explorer(Opsplorer) {
-    nnoremap <silent> <leader>e :<c-u>Opsplore<cr>
+" Explorer(Nerdtree) {
+    nnoremap <silent> <leader>e :<c-u>NERDTreeToggle<cr>
 " }
 
 " Bracket {
