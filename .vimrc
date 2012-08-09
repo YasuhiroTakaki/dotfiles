@@ -43,7 +43,7 @@ endfor
 "-------------------------------------------
 " Read local setting files
 "
-if filereadable(expand('$TOP/.vimrc.local'))
-    source $TOP/.vimrc.local
+if filereadable(expand('~/.vimrc.local'))
+    source ~/.vimrc.local
 endif
 
