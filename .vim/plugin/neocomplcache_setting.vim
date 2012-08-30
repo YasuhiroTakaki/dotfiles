@@ -7,7 +7,7 @@ let g:neocomplcache_auto_completion_start_length = 2
 " Ignore Upper/Lower case
 let g:neocomplcache_enable_ignore_case = 1
 " Smart case
-let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_smart_case = 0
 " Unspecify matching
 let g:neocomplcache_enable_camel_case_completion = 0
 let g:neocomplcache_enable_underbar_completion = 0
