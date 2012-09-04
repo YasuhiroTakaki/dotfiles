@@ -30,6 +30,9 @@ Bundle "wincent/Command-T"
 "Bundle "vim-scripts/opsplorer"
 Bundle "scrooloose/nerdtree"
 Bundle "vim-scripts/matchit.zip"
+Bundle "vim-scripts/occur.vim"
+Bundle "vim-scripts/TagHighlight"
+Bundle "gregsexton/gitv"
 
 filetype plugin indent on
 

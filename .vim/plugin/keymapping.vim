@@ -13,6 +13,9 @@ nmap     <leader>m [MEMOCMD]
 noremap [WINCMD]  <nop>
 nmap     <leader>w [WINCMD]
 
+noremap [OCCCMD]  <nop>
+nmap     <leader>o [OCCCMD]
+
 """ MAP
 " Page {
     noremap <c-j> <c-d>
@@ -61,6 +64,8 @@ nmap     <leader>w [WINCMD]
     nnoremap <silent> [GITCMD]a :<c-u>Gwrite<cr>
     nnoremap <silent> [GITCMD]c :<c-u>Gcommit<cr>
     nnoremap <silent> [GITCMD]b :<c-u>Gblame<cr>
+    nnoremap <silent> [GITCMD]k :<c-u>Gitv --all<cr>
+    nnoremap <silent> [GITCMD]f :<c-u>Gitv!<cr>
 " }
 
 " MEMO Command {
