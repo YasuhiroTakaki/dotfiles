@@ -13,5 +13,5 @@ autocmd QuickfixCmdPost grep,make copen
 """ Tags file
 set tags+=~/.tags/android_sdk
 set tags+=~/.tags/java6
-set tags+=${TOP}/tags
+set tags+=$TOP/tags
 

@@ -54,7 +54,8 @@ nmap     <leader>o [OCCCMD]
     nnoremap <silent> [TABCMD]e :<c-u>tabedit<cr>
     nnoremap <silent> [TABCMD]c :<c-u>tabclose<cr>
     nnoremap <silent> [TABCMD]o :<c-u>tabonly<cr>
-    nnoremap <silent> [TABCMD]s :<c-u>tabs<cr> nnoremap <silent> [TABCMD]r :<c-u>TabRecent<cr>
+    nnoremap <silent> [TABCMD]s :<c-u>tabs<cr>
+    nnoremap <silent> [TABCMD]r :<c-u>TabRecent<cr>
 " }
 
 " GIT Command {
