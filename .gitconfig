@@ -7,6 +7,9 @@
 	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
 	diffv = diff --word-diff
 	diff-name = diff --name-only
+	add-all = !git diff --name-only | xargs git add
+	br = branch
+	brs = !git branches
 [core]
 	editor = vim
 [color]
