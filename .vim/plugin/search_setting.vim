@@ -2,8 +2,8 @@
 " Search setting
 "
 " if case setting is needed, set in .local file.
-"set ignorecase
-"set smartcase
+set ignorecase
+set smartcase
 set wrapscan
 set incsearch
 set hlsearch
