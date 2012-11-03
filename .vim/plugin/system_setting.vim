@@ -19,3 +19,6 @@ set hidden
 set history=50
 set autoread
 
+""" Mouse
+set mouse=a
+
