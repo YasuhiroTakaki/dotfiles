@@ -1,21 +1,55 @@
-function! GuiTabLabel()
-    let l:label = ''
-    let l:bufnrlist = tabpagebuflist(v:lnum)
-    let l:bufname = fnamemodify(bufname(l:bufnrlist[tabpagewinnr(v:lnum) - 1]), ':t')
-    let l:label .= l:bufname == '' ? 'No title' : l:bufname
-    let l:wincount = tabpagewinnr(v:lnum, '$')
-    if l:wincount > 1
-        let l:label .= '[' . l:wincount . ']'
-    endif
-    for bufnr in l:bufnrlist
-        if getbufvar(bufnr, "&modified")
-            let l:label .= '[+]'
-            break
-        endif
-    endfor
+" tabline always on
+set showtabline=2
+" if gui_running, then use cui tabline
+"set guioptions-=e
 
-    return l:label
-endfunction
+function! MakeTabLine() "{{{
+  let titles = map(range(1, tabpagenr('$')), 's:tabpage_label(v:val)')
+  let sep = ' '  " space
+  let tabpages = join(titles, sep) . sep . '%#TabLineFill#%T'
+  let info = ''  " use some info
 
-set guitablabel=%N:\ %{GuiTabLabel()}
+  "FoldCCnavi
+  if exists('*FoldCCnavi')
+    let info .= '%#TabLineInfo#'.substitute(FoldCCnavi()[-60:],'\s>\s','%#TabLineFill#> %#TabLineInfo#','g').'%0* '
+  endif
+
+  " view current dir
+  let info .= '['.fnamemodify(getcwd(), ":~") . ']'
+
+  return tabpages . '%=' . info  " left:tab info / right:info
+endfunction "}}}
+
+function! s:tabpage_label(tabpagenr) "{{{
+  let title = gettabvar(a:tabpagenr, 'title') "
+  if title !=# ''
+    return title
+  endif
+
+  " get tab list
+  let bufnrs = tabpagebuflist(a:tabpagenr)
+
+  " if current tab, then set hilight
+  let hi = a:tabpagenr is tabpagenr() ? '%#TabLineSel#' : '%#TabLine#'
+
+  " show tab num
+  let no = len(bufnrs)
+  if no is 1
+    let no = ''
+  endif
+  " edit buf
+  let mod = len(filter(copy(bufnrs), 'getbufvar(v:val, "&modified")')) ? '+' : ''
+  let nomod = (no . mod) ==# '' ? '' : '['.no.mod.']'
+
+  let curbufnr = bufnrs[tabpagewinnr(a:tabpagenr) - 1]  " tabpagewinnr() は 1 origin
+  let fname = fnamemodify(bufname(curbufnr), ':t')
+  let fname = fname is '' ? 'No title' : fname "Null buffer name set No title
+
+  let label = fname . nomod
+
+"  return '%' . a:tabpagenr . 'T' . hi .a:tabpagenr.': '. curbufnr.'-' . label . '%T%#TabLineFill#'
+  return '%' . a:tabpagenr . 'T' . hi .a:tabpagenr.': '. label . '%T%#TabLineFill#'
+endfunction "}}}
+
+set tabline=%!MakeTabLine()
 
