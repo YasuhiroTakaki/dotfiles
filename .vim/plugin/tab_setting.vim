@@ -51,5 +51,6 @@ function! s:tabpage_label(tabpagenr) "{{{
   return '%' . a:tabpagenr . 'T' . hi .a:tabpagenr.': '. label . '%T%#TabLineFill#'
 endfunction "}}}
 
-set tabline=%!MakeTabLine()
-
+if v:version >= 703
+    set tabline=%!MakeTabLine()
+endif
