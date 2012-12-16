@@ -1,0 +1,10 @@
+*.bak
+*.BAK
+*.swp
+*.patch
+*.so
+*.js
+*.a
+*.o
+*.obj
+

@@ -7,7 +7,7 @@ set smartcase
 set wrapscan
 set incsearch
 set hlsearch
-set grepprg=grep\ -nHr
+set grepprg=grep\ -nHrI\ --exclude-dir=.git\ --exclude-dir=.repo\ --exclude-from=$HOME/.vim/plugin/exclude_grep.lst
 autocmd QuickfixCmdPost grep,make copen
 
 """ Tags file
