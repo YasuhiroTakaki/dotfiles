@@ -1,0 +1,17 @@
+--exclude=*.js
+--exclude=*.so
+--exclude=*.o
+--exclude=*.a
+--exclude=*.obj
+--exclude=*.s
+--exclude=prebuilts
+--exclude=.git
+--exclude=.repo
+--exclude=*test*
+--exclude=ndk
+--exclude=gdk
+--exclude=sdk
+--exclude=pdk
+--exclude=emulator
+--exclude=qemu
+
