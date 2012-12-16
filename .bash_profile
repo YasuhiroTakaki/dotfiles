@@ -28,8 +28,7 @@ fi
 
 ### USER PATH SETTING ###
 # Android SDK
-export PATH=${PATH}:${HOME}/bin/android-sdk-linux/tools:
-export PATH=${PATH}:${HOME}/bin/android-sdk-linux/platform-tools:
-
-
+export PATH=${PATH}:${HOME}/bin/android-sdk/tools
+export PATH=${PATH}:${HOME}/bin/android-sdk/platform-tools
+export PATH=${PATH}:${HOME}/bin/android-ndk
 
