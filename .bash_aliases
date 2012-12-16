@@ -15,11 +15,11 @@ function ext() {
        *.bz2) bunzip2 $1 ;;
        *.gz) gunzip $1 ;;
        *.rar) rar x $1 ;;
-       *.tar) tar xvf $1 ;;
-       *.tar.bz2) tar xvjf $1 ;;
-       *.tar.gz) tar xvzf $1 ;;
-       *.tbz2) tar xvjf $1 ;;
-       *.tgz) tar xvzf $1 ;;
+       *.tar) tar xfs $1 ;;
+       *.tar.bz2) tar xfs $1 ;;
+       *.tar.gz) tar xfs $1 ;;
+       *.tbz2) tar xfs $1 ;;
+       *.tgz) tar xfs $1 ;;
        *.Z) uncompress $1 ;;
        *.zip) unzip $1 ;;
        *) echo "Error: extraction impossible for '$1'..." ;;
