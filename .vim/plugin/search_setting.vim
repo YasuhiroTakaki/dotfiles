@@ -8,7 +8,7 @@ set wrapscan
 set incsearch
 set hlsearch
 set grepprg=grep\ -nHrI\ --exclude-dir=.git\ --exclude-dir=.repo\ --exclude-from=$HOME/.vim/plugin/exclude_grep.lst
-autocmd QuickfixCmdPost grep,make copen
+autocmd QuickfixCmdPost grep,make if len(getqflist()) != 0 | copen | endif
 
 """ Tags file
 set tags+=~/.tags/android_sdk
