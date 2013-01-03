@@ -5,6 +5,7 @@
 set number
 set showmatch matchtime=1
 set cindent
+set expandtab
 set title
 set display=lastline
 set list
