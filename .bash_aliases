@@ -33,3 +33,44 @@ function cleanup() {
     find $1 -name "*.bak" | xargs rm
     find $1 -name "*.BAK" | xargs rm
 }
+
+function mytags() {
+    case $1 in
+    c)
+        LANG=c,c++
+        OFILE=ccpp.tags
+        ;;
+    java)
+        LANG=java
+        OFILE=java.tags
+        ;;
+    make)
+        LANG=make
+        OFILE=make.tags
+        ;;
+    sh)
+        LANG=sh
+        OFILE=sh.tags
+        ;;
+    pl)
+        LANG=perl
+        OFILE=perl.tags
+        ;;
+    py)
+        LANG=python
+        OFILE=python.tags
+        ;;
+    *)
+        LANG=
+        OFILE=
+        ;;
+    esac
+
+    if [ -n "${LANG}" ] ; then
+        if [ -e "./.${OFILE}" ] ; then
+            echo "Cleanup old tag files"
+            rm -Rf ./.${OFILE}
+        fi
+        ctags -R --languages=${LANG} -o ./.${OFILE}
+    fi
+}

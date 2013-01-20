@@ -13,5 +13,10 @@ autocmd QuickfixCmdPost grep,make if len(getqflist()) != 0 | copen | endif
 """ Tags file
 set tags+=~/.tags/android_sdk
 set tags+=~/.tags/java6
-set tags+=$TOP/tags
+augroup set_tags
+    autocmd!
+    autocmd FileType c,cpp  set tags+=$TOP/.ccpp.tags
+    autocmd FileType java   set tags+=$TOP/.java.tags
+    autocmd FileType make   set tags+=$TOP/.make.tags
+augroup END
 
