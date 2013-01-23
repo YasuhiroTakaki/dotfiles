@@ -35,42 +35,42 @@ function cleanup() {
 }
 
 function mytags() {
+    local TAG_LANG=""
+    local OFILE=""
     case $1 in
     c)
-        LANG=c,c++
+        TAG_LANG=c,c++
         OFILE=ccpp.tags
         ;;
     java)
-        LANG=java
+        TAG_LANG=java
         OFILE=java.tags
         ;;
     make)
-        LANG=make
+        TAG_LANG=make
         OFILE=make.tags
         ;;
     sh)
-        LANG=sh
+        TAG_LANG=sh
         OFILE=sh.tags
         ;;
     pl)
-        LANG=perl
+        TAG_LANG=perl
         OFILE=perl.tags
         ;;
     py)
-        LANG=python
+        TAG_LANG=python
         OFILE=python.tags
         ;;
     *)
-        LANG=
-        OFILE=
+        echo "Error: Unknown language ${1}"
+        return
         ;;
     esac
 
-    if [ -n "${LANG}" ] ; then
-        if [ -e "./.${OFILE}" ] ; then
-            echo "Cleanup old tag files"
-            rm -Rf ./.${OFILE}
-        fi
-        ctags -R --languages=${LANG} -o ./.${OFILE}
+    if [ -e "./.${OFILE}" ] ; then
+        echo "Cleanup old tag files"
+        rm -Rf ./.${OFILE}
     fi
+    ctags -R --languages=${TAG_LANG} -o ./.${OFILE}
 }
