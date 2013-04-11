@@ -5,6 +5,7 @@ alias hisg='history | grep'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias rmd='rm -Rf'
+alias cpd='cp -Rf'
 alias gvim='gvim -f'
 
 # function
