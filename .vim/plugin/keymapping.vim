@@ -18,6 +18,8 @@ nmap     <leader>o [OCCCMD]
 
 """ MAP
 " Page {
+    noremap <S-j> 5j
+    noremap <S-k> 5k
     noremap <c-j> <c-d>
     noremap <c-k> <c-u>
 " }
