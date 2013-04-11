@@ -20,6 +20,8 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
  
 Bundle "Shougo/neocomplcache"
+Bundle "Shougo/neosnippet"
+Bundle "honza/vim-snippets"
 "Bundle "Shougo/vimshell"
 Bundle "Shougo/vimproc"
 Bundle "tpope/vim-fugitive"
