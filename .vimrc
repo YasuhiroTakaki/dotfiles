@@ -35,6 +35,7 @@ Bundle "vim-scripts/matchit.zip"
 Bundle "vim-scripts/occur.vim"
 Bundle "vim-scripts/TagHighlight"
 Bundle "gregsexton/gitv"
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on
 
