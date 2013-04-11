@@ -7,7 +7,6 @@
 --exclude=prebuilts
 --exclude=.git
 --exclude=.repo
---exclude=*test*
 --exclude=ndk
 --exclude=gdk
 --exclude=sdk
