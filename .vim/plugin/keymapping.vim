@@ -22,6 +22,11 @@ nmap     <leader>o [OCCCMD]
     noremap <S-k> 5k
     noremap <c-j> <c-d>
     noremap <c-k> <c-u>
+    inoremap <C-j> <Down>
+    inoremap <C-k> <Up>
+    inoremap <C-h> <Left>
+    inoremap <C-l> <Right>
+    inoremap <silent> jj <ESC>
 " }
 
 " End hilight {
