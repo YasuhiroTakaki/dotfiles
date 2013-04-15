@@ -24,7 +24,7 @@ nmap     <leader>o [OCCCMD]
     noremap <c-k> <c-u>
     inoremap <C-j> <Down>
     inoremap <C-k> <Up>
-    inoremap <C-h> <Left>
+"    inoremap <C-h> <Left>
     inoremap <C-l> <Right>
     inoremap <silent> jj <ESC>
 " }
