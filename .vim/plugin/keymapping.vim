@@ -29,8 +29,12 @@ nmap     <leader>o [OCCCMD]
     inoremap <silent> jj <ESC>
 " }
 
-" End hilight {
+" shell mode{
     nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
+" }
+
+" End hilight {
+    noremap <c-s> :<c-u>sh<cr>
 " }
 
 " Explorer(Nerdtree) {
