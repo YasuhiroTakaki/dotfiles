@@ -7,6 +7,7 @@ alias ...='cd ../..'
 alias rmd='rm -Rf'
 alias cpd='cp -Rf'
 alias gvim='gvim -f'
+alias repoa='repo foral -c'
 
 # function
 function ext() {
