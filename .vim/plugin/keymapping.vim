@@ -29,11 +29,12 @@ nmap     <leader>o [OCCCMD]
     inoremap <silent> jj <ESC>
 " }
 
-" shell mode{
+" End hilight {
     nnoremap <silent> <Esc><Esc> :<c-u>noh<cr>
 " }
 
-" End hilight {
+" shell mode{
+    nnoremap <c-d> :<c-u>q<cr>
     nnoremap <c-s> :<c-u>sh<cr>
 " }
 
