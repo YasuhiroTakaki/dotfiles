@@ -20,6 +20,8 @@ nmap     <leader>o [OCCCMD]
 " Page {
     noremap <S-j> 5j
     noremap <S-k> 5k
+    noremap <S-h> <Home>
+    noremap <S-l> <End>
     noremap <c-j> <c-d>
     noremap <c-k> <c-u>
     inoremap <C-j> <Down>
