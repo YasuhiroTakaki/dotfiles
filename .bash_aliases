@@ -76,3 +76,27 @@ function mytags() {
     fi
     ctags -R --languages=${TAG_LANG} -o ./.${OFILE}
 }
+
+
+function pcinfo() {
+    echo '================== OS ======================'
+    lsb_release -d
+    echo ''
+    echo '================== KERNEL =================='
+    uname -a
+    echo ''
+    echo '================== CPU ====================='
+    cat /proc/cpuinfo | grep 'model name' | uniq
+    cat /proc/cpuinfo | grep 'physical id' | uniq
+    cat /proc/cpuinfo | grep 'cpu cores' | uniq
+    logical_core_num=`cat /proc/cpuinfo | grep 'processor' | uniq | wc -l`
+    echo "processor num   : ${logical_core_num}"
+    echo ''
+    echo '================== GPU ====================='
+    lspci | grep -i VGA | uniq
+    echo ''
+    echo '================== PROXY ==================='
+    echo "http_proxy      : ${http_proxy}"
+    echo "https_proxy     : ${https_proxy}"
+    echo ''
+}
